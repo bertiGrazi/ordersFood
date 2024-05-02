@@ -9,7 +9,7 @@ import UIKit
 
 class HomeVC: UIViewController {
     
-    var screen = HomeScreen()
+    var screen: HomeScreen?
     var viewModel = HomeViewModel()
     
     override func loadView() {
@@ -25,15 +25,18 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.primarybgColor
         viewModel.fetchRequest(.request)
+        viewModel.delegate(delegate: self)
     }
+    
 }
 
 //MARK: - HomeViewModelDelegate
 extension HomeVC: HomeViewModelDelegate {
     func success() {
         DispatchQueue.main.async {
-            self.screen.configCollectionViewProtocols(delegate: self, dataSource: self)
-            self.screen.configTableViewProtocols(delegate: self, dataSource: self)
+            self.screen?.configCollectionViewProtocols(delegate: self, dataSource: self)
+            self.screen?.configTableViewProtocols(delegate: self, dataSource: self)
+            self.screen?.tableView.reloadData()
         }
     }
     
@@ -51,6 +54,11 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: ItensTableViewCell.identifier, for: indexPath) as? ItensTableViewCell
         cell?.setupCell(itens: viewModel.loadItensIndexPath(indexPath: indexPath))
         return cell ?? UITableViewCell()
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return viewModel.heightForRowAt
     }
 }
 

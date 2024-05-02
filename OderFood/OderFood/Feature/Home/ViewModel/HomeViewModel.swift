@@ -56,6 +56,10 @@ class HomeViewModel {
         return categoriesData?.itensList?[indexPath.row] ?? Itens()
     }
     
+    public var heightForRowAt: CGFloat {
+        return 360
+    }
+    
     // MARK: - CategoriesCollectionView
     public var numberOfRowsCategoriesInSection: Int {
         return categoriesData?.categoriesList?.count ?? 0

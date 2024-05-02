@@ -8,7 +8,6 @@
 import Foundation
 import Alamofire
 
-//https://run.mocky.io/v3/4149187e-3c4c-4e0a-87ca-403b20582c56
 
 protocol HomeServiceDelegate: GenericService {
     func getCategoriesFromJson(completion: @escaping completion<CategoriesData?>)
@@ -17,7 +16,7 @@ protocol HomeServiceDelegate: GenericService {
 
 class HomeService: HomeServiceDelegate {
     func getHome(completion: @escaping completion<CategoriesData?>) {
-        let url = "https://run.mocky.io/v3/4149187e-3c4c-4e0a-87ca-403b20582c56"
+        let url = "https://run.mocky.io/v3/8b100e6b-be45-44bb-a060-a1f3a9ec8a39"
         
         AF.request(url, method: .get).validate(statusCode: 200...299).responseDecodable(of: CategoriesData.self) { response in
             debugPrint(response)
