@@ -13,7 +13,7 @@ class CategoriesCollectionViewCellScreen: UIView {
         var label = UILabel()
         label.textColor = UIColor.primaryTextColor
         label.font = UIFont.systemFont(ofSize: 14)
-        label.backgroundColor = UIColor.primarybgColor.withAlphaComponent(0.5)
+        label.backgroundColor = .red
         label.clipsToBounds = true
         label.layer.cornerRadius = 6
         label.textAlignment = .center

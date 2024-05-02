@@ -1,5 +1,5 @@
 //
-//  Categories.swift
+//  CategoriesData.swift
 //  OrdersrFood
 //
 //  Created by Grazi  Berti on 02/05/24.
@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - CategoriesData
 struct CategoriesData: Codable {
-    var categories: [Categories]
+    var categoriesList: [Categories]?
 }
 
 // MARK: - Categories
@@ -23,5 +23,5 @@ struct Itens: Codable {
     var name: String?
     var image: String?
     var description: String?
-    var price: Double
+    var price: Double?
 }

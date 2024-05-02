@@ -38,11 +38,11 @@ class HomeViewModel {
     
     // MARK: - CategoriesCollectionView
     public var numberOfItemsInSection: Int {
-        return categoriesData?.categories.count ?? 0
+        return categoriesData?.categoriesList?.count ?? 0
     }
     
     public func loadCategoriesIndexPath(indexPath: IndexPath) -> Categories {
-        return categoriesData?.categories[indexPath.row] ?? Categories()
+        return categoriesData?.categoriesList?[indexPath.row] ?? Categories()
     }
     
     public var sizeForItemAt: CGSize {
