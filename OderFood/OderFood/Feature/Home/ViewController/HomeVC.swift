@@ -28,3 +28,32 @@ class HomeVC: UIViewController {
     }
 }
 
+//MARK: - HomeViewModelDelegate
+extension HomeVC: HomeViewModelDelegate {
+    func success() {
+        DispatchQueue.main.async {
+            self.screen.configCollectionViewProtocols(delegate: self, dataSource: self)
+        }
+    }
+    
+    func error() {
+        print(#function)
+    }
+}
+
+//MARK: - UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.numberOfItemsInSection
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCollectionViewCell.identifier, for: indexPath) as? CategoriesCollectionViewCell
+        cell?.setupCell(categories: viewModel.loadCategoriesIndexPath(indexPath: indexPath))
+        return cell ?? UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return viewModel.sizeForItemAt
+    }
+}

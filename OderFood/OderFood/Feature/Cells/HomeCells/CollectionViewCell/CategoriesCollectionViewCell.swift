@@ -27,7 +27,7 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     }
     
     public func setupCell(categories: Categories) {
-        screen.categoryLabel.text = categories.name
+        screen.categoryLabel.text = categories.name ?? "Teste da Grazi"
     }
     
     private func addViews() {

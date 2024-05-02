@@ -15,7 +15,7 @@ struct CategoriesData: Codable {
 // MARK: - Categories
 struct Categories: Codable {
     var name: String?
-    var itens: [Itens]
+    var itens: [Itens]?
 }
 
 // MARK: - Itens
