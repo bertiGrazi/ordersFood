@@ -70,6 +70,6 @@ class HomeViewModel {
     }
     
     public var sizeForItemAt: CGSize {
-        return CGSize(width: 50, height: 34)
+        return CGSize(width: 108, height: 34)
     }
 }

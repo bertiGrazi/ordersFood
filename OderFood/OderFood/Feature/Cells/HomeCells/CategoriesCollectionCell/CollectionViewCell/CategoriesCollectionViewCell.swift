@@ -12,7 +12,7 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     
     private lazy var screen: CategoriesCollectionViewCellScreen = {
         let view = CategoriesCollectionViewCellScreen()
-        view.backgroundColor = .red
+        view.backgroundColor = .clear
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()

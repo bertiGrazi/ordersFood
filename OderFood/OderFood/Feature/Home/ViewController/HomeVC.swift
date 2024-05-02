@@ -27,7 +27,6 @@ class HomeVC: UIViewController {
         viewModel.fetchRequest(.request)
         viewModel.delegate(delegate: self)
     }
-    
 }
 
 //MARK: - HomeViewModelDelegate
