@@ -47,13 +47,22 @@ class HomeViewModel {
         }
     }
     
+    // MARK: - ItensTableView
+    public var numberOfRowsInSection: Int {
+        return categoriesData?.itensList?.count ?? 0
+    }
+    
+    public func loadItensIndexPath(indexPath: IndexPath) -> Itens {
+        return categoriesData?.itensList?[indexPath.row] ?? Itens()
+    }
+    
     // MARK: - CategoriesCollectionView
-    public var numberOfItemsInSection: Int {
+    public var numberOfRowsCategoriesInSection: Int {
         return categoriesData?.categoriesList?.count ?? 0
     }
     
     public func loadCategoriesIndexPath(indexPath: IndexPath) -> Categories {
-        return categoriesData?.categoriesList?[indexPath.row] ?? Categories(name: nil, itens: nil)
+        return categoriesData?.categoriesList?[indexPath.row] ?? Categories()
     }
     
     public var sizeForItemAt: CGSize {

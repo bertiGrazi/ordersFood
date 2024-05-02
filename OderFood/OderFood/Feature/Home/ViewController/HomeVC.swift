@@ -33,6 +33,7 @@ extension HomeVC: HomeViewModelDelegate {
     func success() {
         DispatchQueue.main.async {
             self.screen.configCollectionViewProtocols(delegate: self, dataSource: self)
+            self.screen.configTableViewProtocols(delegate: self, dataSource: self)
         }
     }
     
@@ -41,10 +42,22 @@ extension HomeVC: HomeViewModelDelegate {
     }
 }
 
+extension HomeVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRowsInSection
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ItensTableViewCell.identifier, for: indexPath) as? ItensTableViewCell
+        cell?.setupCell(itens: viewModel.loadItensIndexPath(indexPath: indexPath))
+        return cell ?? UITableViewCell()
+    }
+}
+
 //MARK: - UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.numberOfItemsInSection
+        return viewModel.numberOfRowsCategoriesInSection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

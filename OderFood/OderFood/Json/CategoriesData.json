@@ -1,19 +1,22 @@
 {
-  "categoriesList": [
-    {
-      "name": "Lanche do dia",
-      "itens": [
+    "categoriesList": [
+            {
+                "name": "Lanche do dia"
+            },
+            {
+                "name": "Promoções"
+            },
+            {
+                "name": "Bebida"
+            },
+    ],
+    "itensList": [
         {
           "name": "X-React",
           "image": "Hambúrguer",
           "description": "Um hambúrger tão bonito que me deu fome enquanto eu fazia esse layout para o projeto.",
           "price": 34.90
-        }
-      ]
-    },
-    {
-      "name": "Promoções",
-      "itens": [
+        },
         {
           "name": "X-JavaScript",
           "image": "Hambúrguer",
@@ -31,19 +34,12 @@
           "image": "Hambúrguer",
           "description": "Aquele que você não gosta de primeira, mas depois fica viciado e não consegue mais largar...",
           "price": 34.90
-        }
-      ]
-    },
-    {
-      "name": "Bebida",
-      "itens": [
+        },
         {
           "name": "Hmmm, coquinha!",
           "image": "Hambúrguer",
           "description": "Coca zero geladinha",
           "price": 5.90
         }
-      ]
-    }
-  ]
+    ]
 }

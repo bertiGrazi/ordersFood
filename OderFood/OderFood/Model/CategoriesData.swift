@@ -10,12 +10,12 @@ import Foundation
 // MARK: - CategoriesData
 struct CategoriesData: Codable {
     var categoriesList: [Categories]?
+    var itensList: [Itens]?
 }
 
 // MARK: - Categories
 struct Categories: Codable {
     var name: String?
-    var itens: [Itens]?
 }
 
 // MARK: - Itens

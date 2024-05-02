@@ -52,6 +52,20 @@ class HomeScreen: UIView {
         return collectionView
     }()
     
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(ItensTableViewCell.self, forCellReuseIdentifier: ItensTableViewCell.identifier)
+        tableView.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        tableView.separatorStyle = .none
+        return tableView
+    }()
+    
+    func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
+        tableView.delegate = delegate
+        tableView.dataSource = dataSource
+    }
+    
     func configCollectionViewProtocols(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
         collectionView.delegate = delegate
         collectionView.dataSource = dataSource
@@ -69,6 +83,7 @@ class HomeScreen: UIView {
         viewBackground.addSubview(titleLabel)
         viewBackground.addSubview(dividerView)
         viewBackground.addSubview(collectionView)
+        addSubview(tableView)
     }
     
     func configConstrains() {
@@ -95,6 +110,11 @@ class HomeScreen: UIView {
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: viewBackground.bottomAnchor),
+            
+            tableView.topAnchor.constraint(equalTo: viewBackground.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
     
