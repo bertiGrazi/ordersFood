@@ -9,6 +9,13 @@ import UIKit
 
 class HomeScreen: UIView {
     
+    lazy var viewBackground: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = UIColor.primarybgColor
+        return view
+    }()
+    
     lazy var logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "Logo")
@@ -32,6 +39,38 @@ class HomeScreen: UIView {
         return view
     }()
     
+    lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = .clear
+        collectionView.register(CategoriesCollectionViewCell.self, forCellWithReuseIdentifier: CategoriesCollectionViewCell.identifier)
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
+        layout.scrollDirection = .horizontal
+        collectionView.setCollectionViewLayout(layout, animated: false)
+        return collectionView
+    }()
+    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(ItensTableViewCell.self, forCellReuseIdentifier: ItensTableViewCell.identifier)
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
+        return tableView
+    }()
+    
+    func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
+        tableView.delegate = delegate
+        tableView.dataSource = dataSource
+    }
+    
+    func configCollectionViewProtocols(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
+        collectionView.delegate = delegate
+        collectionView.dataSource = dataSource
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addView()
@@ -39,16 +78,25 @@ class HomeScreen: UIView {
     }
     
     func addView() {
-        addSubview(logoImageView)
-        addSubview(titleLabel)
-        addSubview(dividerView)
+        addSubview(viewBackground)
+        viewBackground.addSubview(logoImageView)
+        viewBackground.addSubview(titleLabel)
+        viewBackground.addSubview(dividerView)
+        viewBackground.addSubview(collectionView)
+        addSubview(tableView)
     }
     
     func configConstrains() {
         NSLayoutConstraint.activate([
-            logoImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 32),
+            viewBackground.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            viewBackground.leadingAnchor.constraint(equalTo: leadingAnchor),
+            viewBackground.trailingAnchor.constraint(equalTo: trailingAnchor),
+            viewBackground.heightAnchor.constraint(equalToConstant: 160),
+            
+            logoImageView.topAnchor.constraint(equalTo: viewBackground.topAnchor, constant: 5),
             logoImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             logoImageView.heightAnchor.constraint(equalToConstant: 24),
+            logoImageView.widthAnchor.constraint(equalToConstant: 124),
             
             titleLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 8),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
@@ -57,6 +105,16 @@ class HomeScreen: UIView {
             dividerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             dividerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             dividerView.heightAnchor.constraint(equalToConstant: 1),
+            
+            collectionView.topAnchor.constraint(equalTo: dividerView.bottomAnchor, constant: 20),
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: viewBackground.bottomAnchor),
+            
+            tableView.topAnchor.constraint(equalTo: viewBackground.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
     

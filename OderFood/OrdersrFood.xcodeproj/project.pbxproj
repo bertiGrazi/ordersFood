@@ -13,6 +13,17 @@
 		B12247062BE2612800DEABA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B12247052BE2612800DEABA0 /* Assets.xcassets */; };
 		B12247092BE2612800DEABA0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B12247082BE2612800DEABA0 /* Base */; };
 		B12247142BE2666100DEABA0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12247132BE2666100DEABA0 /* UIColor+Extension.swift */; };
+		B127CBDF2BE3C01600E8BB6B /* CategoriesData.json in Resources */ = {isa = PBXBuildFile; fileRef = B127CBDE2BE3C01600E8BB6B /* CategoriesData.json */; };
+		B127CBE22BE3C04E00E8BB6B /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B127CBE12BE3C04E00E8BB6B /* GenericService.swift */; };
+		B127CBE62BE3C1BB00E8BB6B /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B127CBE52BE3C1BB00E8BB6B /* HomeService.swift */; };
+		B127CBE92BE3C1EA00E8BB6B /* CategoriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B127CBE82BE3C1EA00E8BB6B /* CategoriesData.swift */; };
+		B127CBEC2BE3C54600E8BB6B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B127CBEB2BE3C54600E8BB6B /* HomeViewModel.swift */; };
+		B127CBF02BE3C73E00E8BB6B /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B127CBEF2BE3C73E00E8BB6B /* CategoriesCollectionViewCell.swift */; };
+		B127CBF42BE3C7F000E8BB6B /* CategoriesCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B127CBF32BE3C7F000E8BB6B /* CategoriesCollectionViewCellScreen.swift */; };
+		B13F44042BE400EE002339CC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B13F44032BE400EE002339CC /* Alamofire */; };
+		B13F44062BE400EE002339CC /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B13F44052BE400EE002339CC /* AlamofireDynamic */; };
+		B13F44112BE40AE2002339CC /* ItensTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13F44102BE40AE2002339CC /* ItensTableViewCellScreen.swift */; };
+		B13F44132BE40BA7002339CC /* ItensTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13F44122BE40BA7002339CC /* ItensTableViewCell.swift */; };
 		B1A90F522BE3B32C00D6FEB0 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A90F512BE3B32C00D6FEB0 /* HomeScreen.swift */; };
 		B1C3375D2BE26A1F003E1019 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C3375C2BE26A1E003E1019 /* CartVC.swift */; };
 		B1C337612BE26A89003E1019 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C337602BE26A89003E1019 /* TabBarVC.swift */; };
@@ -27,6 +38,15 @@
 		B12247082BE2612800DEABA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B122470A2BE2612800DEABA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B12247132BE2666100DEABA0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		B127CBDE2BE3C01600E8BB6B /* CategoriesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CategoriesData.json; sourceTree = "<group>"; };
+		B127CBE12BE3C04E00E8BB6B /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
+		B127CBE52BE3C1BB00E8BB6B /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		B127CBE82BE3C1EA00E8BB6B /* CategoriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesData.swift; sourceTree = "<group>"; };
+		B127CBEB2BE3C54600E8BB6B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B127CBEF2BE3C73E00E8BB6B /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		B127CBF32BE3C7F000E8BB6B /* CategoriesCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCellScreen.swift; sourceTree = "<group>"; };
+		B13F44102BE40AE2002339CC /* ItensTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItensTableViewCellScreen.swift; sourceTree = "<group>"; };
+		B13F44122BE40BA7002339CC /* ItensTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItensTableViewCell.swift; sourceTree = "<group>"; };
 		B1A90F512BE3B32C00D6FEB0 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		B1C3375C2BE26A1E003E1019 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
 		B1C337602BE26A89003E1019 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
@@ -37,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B13F44042BE400EE002339CC /* Alamofire in Frameworks */,
+				B13F44062BE400EE002339CC /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +84,9 @@
 		B12246FB2BE2612600DEABA0 /* OderFood */ = {
 			isa = PBXGroup;
 			children = (
+				B127CBE72BE3C1D200E8BB6B /* Model */,
+				B127CBE02BE3C03100E8BB6B /* Service */,
+				B127CBDD2BE3BFE400E8BB6B /* Json */,
 				B1C3375E2BE26A5A003E1019 /* TabBarController */,
 				B12247112BE2664000DEABA0 /* Utils */,
 				B12246FC2BE2612600DEABA0 /* AppDelegate.swift */,
@@ -77,6 +102,7 @@
 		B12247102BE2615B00DEABA0 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				B127CBED2BE3C70E00E8BB6B /* Cells */,
 				B12247162BE268F400DEABA0 /* Cart */,
 				B12247152BE268EA00DEABA0 /* Home */,
 			);
@@ -102,6 +128,7 @@
 		B12247152BE268EA00DEABA0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B127CBEA2BE3C53700E8BB6B /* ViewModel */,
 				B1A90F502BE3B30900D6FEB0 /* Screen */,
 				B1A90F4F2BE3B2FC00D6FEB0 /* ViewController */,
 			);
@@ -114,6 +141,122 @@
 				B1C3375C2BE26A1E003E1019 /* CartVC.swift */,
 			);
 			path = Cart;
+			sourceTree = "<group>";
+		};
+		B127CBDD2BE3BFE400E8BB6B /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				B127CBDE2BE3C01600E8BB6B /* CategoriesData.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		B127CBE02BE3C03100E8BB6B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B127CBE42BE3C1AC00E8BB6B /* HomeService */,
+				B127CBE32BE3C1A300E8BB6B /* Generic */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B127CBE32BE3C1A300E8BB6B /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				B127CBE12BE3C04E00E8BB6B /* GenericService.swift */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
+		B127CBE42BE3C1AC00E8BB6B /* HomeService */ = {
+			isa = PBXGroup;
+			children = (
+				B127CBE52BE3C1BB00E8BB6B /* HomeService.swift */,
+			);
+			path = HomeService;
+			sourceTree = "<group>";
+		};
+		B127CBE72BE3C1D200E8BB6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B127CBE82BE3C1EA00E8BB6B /* CategoriesData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B127CBEA2BE3C53700E8BB6B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B127CBEB2BE3C54600E8BB6B /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B127CBED2BE3C70E00E8BB6B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B127CBEE2BE3C71500E8BB6B /* HomeCells */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B127CBEE2BE3C71500E8BB6B /* HomeCells */ = {
+			isa = PBXGroup;
+			children = (
+				B13F440E2BE40AB4002339CC /* ItensTableViewCell */,
+				B13F440D2BE40AA4002339CC /* CategoriesCollectionCell */,
+			);
+			path = HomeCells;
+			sourceTree = "<group>";
+		};
+		B127CBF12BE3C75000E8BB6B /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B127CBEF2BE3C73E00E8BB6B /* CategoriesCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		B127CBF22BE3C7D500E8BB6B /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				B127CBF32BE3C7F000E8BB6B /* CategoriesCollectionViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		B13F440C2BE40A8B002339CC /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B13F44122BE40BA7002339CC /* ItensTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		B13F440D2BE40AA4002339CC /* CategoriesCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				B127CBF22BE3C7D500E8BB6B /* Screen */,
+				B127CBF12BE3C75000E8BB6B /* CollectionViewCell */,
+			);
+			path = CategoriesCollectionCell;
+			sourceTree = "<group>";
+		};
+		B13F440E2BE40AB4002339CC /* ItensTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B13F440F2BE40AC3002339CC /* Screen */,
+				B13F440C2BE40A8B002339CC /* TableViewCell */,
+			);
+			path = ItensTableViewCell;
+			sourceTree = "<group>";
+		};
+		B13F440F2BE40AC3002339CC /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				B13F44102BE40AE2002339CC /* ItensTableViewCellScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		B1A90F4F2BE3B2FC00D6FEB0 /* ViewController */ = {
@@ -156,6 +299,10 @@
 			dependencies = (
 			);
 			name = OrdersrFood;
+			packageProductDependencies = (
+				B13F44032BE400EE002339CC /* Alamofire */,
+				B13F44052BE400EE002339CC /* AlamofireDynamic */,
+			);
 			productName = OderFood;
 			productReference = B12246F92BE2612600DEABA0 /* OrdersrFood.app */;
 			productType = "com.apple.product-type.application";
@@ -184,6 +331,9 @@
 				Base,
 			);
 			mainGroup = B12246F02BE2612600DEABA0;
+			packageReferences = (
+				B13F44022BE400EE002339CC /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = B12246FA2BE2612600DEABA0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -199,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B12247062BE2612800DEABA0 /* Assets.xcassets in Resources */,
+				B127CBDF2BE3C01600E8BB6B /* CategoriesData.json in Resources */,
 				B12247092BE2612800DEABA0 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,10 +362,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B12247012BE2612600DEABA0 /* HomeVC.swift in Sources */,
+				B127CBEC2BE3C54600E8BB6B /* HomeViewModel.swift in Sources */,
+				B127CBF42BE3C7F000E8BB6B /* CategoriesCollectionViewCellScreen.swift in Sources */,
 				B12246FD2BE2612600DEABA0 /* AppDelegate.swift in Sources */,
 				B1A90F522BE3B32C00D6FEB0 /* HomeScreen.swift in Sources */,
+				B13F44112BE40AE2002339CC /* ItensTableViewCellScreen.swift in Sources */,
 				B1C3375D2BE26A1F003E1019 /* CartVC.swift in Sources */,
 				B12246FF2BE2612600DEABA0 /* SceneDelegate.swift in Sources */,
+				B127CBF02BE3C73E00E8BB6B /* CategoriesCollectionViewCell.swift in Sources */,
+				B127CBE22BE3C04E00E8BB6B /* GenericService.swift in Sources */,
+				B13F44132BE40BA7002339CC /* ItensTableViewCell.swift in Sources */,
+				B127CBE62BE3C1BB00E8BB6B /* HomeService.swift in Sources */,
+				B127CBE92BE3C1EA00E8BB6B /* CategoriesData.swift in Sources */,
 				B1C337612BE26A89003E1019 /* TabBarVC.swift in Sources */,
 				B12247142BE2666100DEABA0 /* UIColor+Extension.swift in Sources */,
 			);
@@ -367,6 +526,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,6 +554,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -429,6 +590,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B13F44022BE400EE002339CC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B13F44032BE400EE002339CC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B13F44022BE400EE002339CC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B13F44052BE400EE002339CC /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B13F44022BE400EE002339CC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B12246F12BE2612600DEABA0 /* Project object */;
 }
