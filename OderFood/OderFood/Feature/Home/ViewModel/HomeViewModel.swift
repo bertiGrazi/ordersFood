@@ -33,6 +33,17 @@ class HomeViewModel {
                     self.delegate?.error()
                 }
             }
+            
+        case .request:
+            service.getHome { result, failure in
+                if let result {
+                    self.categoriesData = result
+                    self.delegate?.success()
+                } else {
+                    print(failure as Any)
+                    self.delegate?.error()
+                }
+            }
         }
     }
     
@@ -42,10 +53,10 @@ class HomeViewModel {
     }
     
     public func loadCategoriesIndexPath(indexPath: IndexPath) -> Categories {
-        return categoriesData?.categoriesList?[indexPath.row] ?? Categories()
+        return categoriesData?.categoriesList?[indexPath.row] ?? Categories(name: nil, itens: nil)
     }
     
     public var sizeForItemAt: CGSize {
-        return CGSize(width: 100, height: 34)
+        return CGSize(width: 50, height: 34)
     }
 }

@@ -6,12 +6,32 @@
 //
 
 import Foundation
+import Alamofire
+
+//https://run.mocky.io/v3/4149187e-3c4c-4e0a-87ca-403b20582c56
 
 protocol HomeServiceDelegate: GenericService {
     func getCategoriesFromJson(completion: @escaping completion<CategoriesData?>)
+    func getHome(completion: @escaping completion<CategoriesData?>)
 }
 
 class HomeService: HomeServiceDelegate {
+    func getHome(completion: @escaping completion<CategoriesData?>) {
+        let url = "https://run.mocky.io/v3/4149187e-3c4c-4e0a-87ca-403b20582c56"
+        
+        AF.request(url, method: .get).validate(statusCode: 200...299).responseDecodable(of: CategoriesData.self) { response in
+            debugPrint(response)
+            switch response.result {
+            case.success(let success):
+                print("SUCCESS -> \(#function)")
+                completion(success, nil)
+            case.failure(let error):
+                print("ERROR -> \(#function)")
+                completion(nil, Error.errorRequest(error))
+            }
+        }
+    }
+    
     func getCategoriesFromJson(completion: @escaping completion<CategoriesData?>) {
         if let url = Bundle.main.url(forResource: "CategoriesData", withExtension: "json") {
             do {

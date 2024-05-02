@@ -24,7 +24,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.primarybgColor
-        viewModel.fetchRequest(.mock)
+        viewModel.fetchRequest(.request)
     }
 }
 
