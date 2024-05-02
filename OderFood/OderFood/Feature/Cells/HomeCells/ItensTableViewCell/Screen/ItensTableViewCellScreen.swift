@@ -12,7 +12,7 @@ class ItensTableViewCellScreen: UIView {
     lazy var viewBackground: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1.0)
+        view.backgroundColor = UIColor.primarybgColor
         view.clipsToBounds = true
         view.layer.cornerRadius = 18
         return view
@@ -28,6 +28,7 @@ class ItensTableViewCellScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = UIColor.primarybgColor
         addViews()
         configConstraints()
     }

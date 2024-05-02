@@ -11,9 +11,9 @@ class CategoriesCollectionViewCellScreen: UIView {
     
     lazy var categoryLabel: UILabel = {
         var label = UILabel()
-        label.textColor = .black
+        label.textColor = UIColor.primaryTextColor
         label.font = UIFont.systemFont(ofSize: 14)
-        label.backgroundColor = .red
+        label.backgroundColor = UIColor.thirdBgColor
         label.clipsToBounds = true
         label.layer.cornerRadius = 6
         label.textAlignment = .center
