@@ -13,6 +13,11 @@
 		B12247062BE2612800DEABA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B12247052BE2612800DEABA0 /* Assets.xcassets */; };
 		B12247092BE2612800DEABA0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B12247082BE2612800DEABA0 /* Base */; };
 		B12247142BE2666100DEABA0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12247132BE2666100DEABA0 /* UIColor+Extension.swift */; };
+		B127CBDF2BE3C01600E8BB6B /* CategoriesData.json in Resources */ = {isa = PBXBuildFile; fileRef = B127CBDE2BE3C01600E8BB6B /* CategoriesData.json */; };
+		B127CBE22BE3C04E00E8BB6B /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B127CBE12BE3C04E00E8BB6B /* GenericService.swift */; };
+		B127CBE62BE3C1BB00E8BB6B /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B127CBE52BE3C1BB00E8BB6B /* HomeService.swift */; };
+		B127CBE92BE3C1EA00E8BB6B /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B127CBE82BE3C1EA00E8BB6B /* Categories.swift */; };
+		B127CBEC2BE3C54600E8BB6B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B127CBEB2BE3C54600E8BB6B /* HomeViewModel.swift */; };
 		B1A90F522BE3B32C00D6FEB0 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A90F512BE3B32C00D6FEB0 /* HomeScreen.swift */; };
 		B1C3375D2BE26A1F003E1019 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C3375C2BE26A1E003E1019 /* CartVC.swift */; };
 		B1C337612BE26A89003E1019 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C337602BE26A89003E1019 /* TabBarVC.swift */; };
@@ -27,6 +32,11 @@
 		B12247082BE2612800DEABA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B122470A2BE2612800DEABA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B12247132BE2666100DEABA0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		B127CBDE2BE3C01600E8BB6B /* CategoriesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CategoriesData.json; sourceTree = "<group>"; };
+		B127CBE12BE3C04E00E8BB6B /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
+		B127CBE52BE3C1BB00E8BB6B /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		B127CBE82BE3C1EA00E8BB6B /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		B127CBEB2BE3C54600E8BB6B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		B1A90F512BE3B32C00D6FEB0 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		B1C3375C2BE26A1E003E1019 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
 		B1C337602BE26A89003E1019 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
@@ -62,6 +72,9 @@
 		B12246FB2BE2612600DEABA0 /* OderFood */ = {
 			isa = PBXGroup;
 			children = (
+				B127CBE72BE3C1D200E8BB6B /* Model */,
+				B127CBE02BE3C03100E8BB6B /* Service */,
+				B127CBDD2BE3BFE400E8BB6B /* Json */,
 				B1C3375E2BE26A5A003E1019 /* TabBarController */,
 				B12247112BE2664000DEABA0 /* Utils */,
 				B12246FC2BE2612600DEABA0 /* AppDelegate.swift */,
@@ -102,6 +115,7 @@
 		B12247152BE268EA00DEABA0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B127CBEA2BE3C53700E8BB6B /* ViewModel */,
 				B1A90F502BE3B30900D6FEB0 /* Screen */,
 				B1A90F4F2BE3B2FC00D6FEB0 /* ViewController */,
 			);
@@ -114,6 +128,55 @@
 				B1C3375C2BE26A1E003E1019 /* CartVC.swift */,
 			);
 			path = Cart;
+			sourceTree = "<group>";
+		};
+		B127CBDD2BE3BFE400E8BB6B /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				B127CBDE2BE3C01600E8BB6B /* CategoriesData.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		B127CBE02BE3C03100E8BB6B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B127CBE42BE3C1AC00E8BB6B /* HomeService */,
+				B127CBE32BE3C1A300E8BB6B /* Generic */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B127CBE32BE3C1A300E8BB6B /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				B127CBE12BE3C04E00E8BB6B /* GenericService.swift */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
+		B127CBE42BE3C1AC00E8BB6B /* HomeService */ = {
+			isa = PBXGroup;
+			children = (
+				B127CBE52BE3C1BB00E8BB6B /* HomeService.swift */,
+			);
+			path = HomeService;
+			sourceTree = "<group>";
+		};
+		B127CBE72BE3C1D200E8BB6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B127CBE82BE3C1EA00E8BB6B /* Categories.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B127CBEA2BE3C53700E8BB6B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B127CBEB2BE3C54600E8BB6B /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B1A90F4F2BE3B2FC00D6FEB0 /* ViewController */ = {
@@ -199,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B12247062BE2612800DEABA0 /* Assets.xcassets in Resources */,
+				B127CBDF2BE3C01600E8BB6B /* CategoriesData.json in Resources */,
 				B12247092BE2612800DEABA0 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,10 +275,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B12247012BE2612600DEABA0 /* HomeVC.swift in Sources */,
+				B127CBEC2BE3C54600E8BB6B /* HomeViewModel.swift in Sources */,
 				B12246FD2BE2612600DEABA0 /* AppDelegate.swift in Sources */,
 				B1A90F522BE3B32C00D6FEB0 /* HomeScreen.swift in Sources */,
 				B1C3375D2BE26A1F003E1019 /* CartVC.swift in Sources */,
 				B12246FF2BE2612600DEABA0 /* SceneDelegate.swift in Sources */,
+				B127CBE22BE3C04E00E8BB6B /* GenericService.swift in Sources */,
+				B127CBE62BE3C1BB00E8BB6B /* HomeService.swift in Sources */,
+				B127CBE92BE3C1EA00E8BB6B /* Categories.swift in Sources */,
 				B1C337612BE26A89003E1019 /* TabBarVC.swift in Sources */,
 				B12247142BE2666100DEABA0 /* UIColor+Extension.swift in Sources */,
 			);

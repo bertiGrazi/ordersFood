@@ -10,6 +10,7 @@ import UIKit
 class HomeVC: UIViewController {
     
     var screen = HomeScreen()
+    var viewModel = HomeViewModel()
     
     override func loadView() {
         screen = HomeScreen()
@@ -23,6 +24,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.primarybgColor
+        viewModel.fetchRequest(.mock)
     }
 }
 
