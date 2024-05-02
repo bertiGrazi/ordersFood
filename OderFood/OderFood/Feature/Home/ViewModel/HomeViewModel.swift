@@ -57,7 +57,7 @@ class HomeViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 360
+        return 110
     }
     
     // MARK: - CategoriesCollectionView

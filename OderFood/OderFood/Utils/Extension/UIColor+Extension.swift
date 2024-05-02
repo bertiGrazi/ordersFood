@@ -17,4 +17,5 @@ extension UIColor {
     static let thirdBgColor = UIColor.rgb(red: 30, green: 41, blue: 59)
     static let primaryTextColor = UIColor.rgb(red: 255, green: 255, blue: 255)
     static let secondaryTextColor = UIColor.rgb(red: 203, green: 213, blue: 225)
+    static let thirdTextColor = UIColor.rgb(red: 148, green: 163, blue: 184)
 }

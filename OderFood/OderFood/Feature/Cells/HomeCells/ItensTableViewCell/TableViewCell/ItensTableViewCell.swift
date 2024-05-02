@@ -40,6 +40,7 @@ class ItensTableViewCell: UITableViewCell {
     }
     
     public func setupCell(itens: Itens) {
-        screen.nameItemLabel.text = itens.name ?? "Grazi"
+        screen.nameItemLabel.text = itens.name ?? ""
+        screen.descriptionItemLabel.text = itens.description ?? ""
     }
 }

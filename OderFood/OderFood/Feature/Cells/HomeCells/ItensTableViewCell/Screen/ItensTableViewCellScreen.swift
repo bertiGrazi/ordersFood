@@ -20,9 +20,19 @@ class ItensTableViewCellScreen: UIView {
     
     lazy var nameItemLabel: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.primaryTextColor
-        label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        label.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    lazy var descriptionItemLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = UIColor.thirdTextColor
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.textAlignment = .left
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -40,6 +50,7 @@ class ItensTableViewCellScreen: UIView {
     private func addViews() {
         addSubview(viewBackground)
         viewBackground.addSubview(nameItemLabel)
+        viewBackground.addSubview(descriptionItemLabel)
     }
     
     private func configConstraints() {
@@ -47,10 +58,15 @@ class ItensTableViewCellScreen: UIView {
             viewBackground.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             viewBackground.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             viewBackground.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            viewBackground.heightAnchor.constraint(equalToConstant: 340),
+            viewBackground.heightAnchor.constraint(equalToConstant: 92),
             
             nameItemLabel.topAnchor.constraint(equalTo: viewBackground.topAnchor, constant: 20),
             nameItemLabel.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 8),
+            
+            descriptionItemLabel.topAnchor.constraint(equalTo: nameItemLabel.bottomAnchor, constant: 20),
+            descriptionItemLabel.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 8),
+            descriptionItemLabel.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -8),
+            
         ])
     }
 }
