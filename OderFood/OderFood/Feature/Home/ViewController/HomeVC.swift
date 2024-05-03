@@ -45,14 +45,33 @@ extension HomeVC: HomeViewModelDelegate {
 }
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.numberOfSections()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfRowsInSection
+        return viewModel.numberOfRowsInSection(section: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ItensTableViewCell.identifier, for: indexPath) as? ItensTableViewCell
-        cell?.setupCell(itens: viewModel.loadItensIndexPath(indexPath: indexPath))
+        if let item = viewModel.loadItensInSection(section: indexPath.section, row: indexPath.row) {
+            cell?.setupCell(itens: item)
+        } else {
+            // TO DO
+        }
         return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let categories = viewModel.categoriesData?.categoriesList else {
+            return nil
+        }
+        
+        let headerView = HeaderInSectionView()
+        headerView.setupHeader(with: categories[section].name ?? "") 
+        
+        return headerView
     }
     
     

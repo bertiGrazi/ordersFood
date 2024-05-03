@@ -14,7 +14,8 @@ protocol HomeViewModelDelegate: AnyObject {
 
 class HomeViewModel {
     private let service: HomeService = HomeService()
-    private var categoriesData: CategoriesData?
+    
+    var categoriesData: CategoriesData?
     private weak var delegate: HomeViewModelDelegate?
     
     public func delegate(delegate:HomeViewModelDelegate?) {
@@ -48,17 +49,43 @@ class HomeViewModel {
     }
     
     // MARK: - ItensTableView
-    public var numberOfRowsInSection: Int {
-        return categoriesData?.itensList?.count ?? 0
+    
+    public func numberOfSections() -> Int {
+        guard let categories = categoriesData?.categoriesList else {
+            return 0
+        }
+        return categories.count
     }
     
-    public func loadItensIndexPath(indexPath: IndexPath) -> Itens {
-        return categoriesData?.itensList?[indexPath.row] ?? Itens()
+    public func numberOfRowsInSection(section: Int) -> Int {
+        guard let categoryId = categoriesData?.categoriesList?[section].id else {
+            return 0
+        }
+        return numberOfItemsInCategory(categoryId: categoryId)
+    }
+    
+    public func loadItensInSection(section: Int, row: Int) -> Itens? {
+        guard let categoryId = categoriesData?.categoriesList?[section].id else {
+            return nil
+        }
+        return loadItensInCategory(categoryId: categoryId)[row]
+    }
+    
+    private func numberOfItemsInCategory(categoryId: Int) -> Int {
+        return loadItensInCategory(categoryId: categoryId).count
+    }
+    
+    private func loadItensInCategory(categoryId: Int) -> [Itens] {
+        guard let itens = categoriesData?.itensList else {
+            return []
+        }
+        return itens.filter { $0.id == categoryId }
     }
     
     public var heightForRowAt: CGFloat {
         return 110
     }
+    
     
     // MARK: - CategoriesCollectionView
     public var numberOfRowsCategoriesInSection: Int {
