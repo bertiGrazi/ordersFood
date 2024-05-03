@@ -16,10 +16,12 @@ struct CategoriesData: Codable {
 // MARK: - Categories
 struct Categories: Codable {
     var name: String?
+    var id: Int?
 }
 
 // MARK: - Itens
 struct Itens: Codable {
+    var id: Int?
     var name: String?
     var image: String?
     var description: String?
