@@ -18,6 +18,15 @@ class ItensTableViewCellScreen: UIView {
         return view
     }()
     
+    lazy var foodImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = 6
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     lazy var nameItemLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.primaryTextColor
@@ -49,6 +58,7 @@ class ItensTableViewCellScreen: UIView {
     
     private func addViews() {
         addSubview(viewBackground)
+        viewBackground.addSubview(foodImageView)
         viewBackground.addSubview(nameItemLabel)
         viewBackground.addSubview(descriptionItemLabel)
     }
@@ -60,12 +70,17 @@ class ItensTableViewCellScreen: UIView {
             viewBackground.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             viewBackground.heightAnchor.constraint(equalToConstant: 92),
             
-            nameItemLabel.topAnchor.constraint(equalTo: viewBackground.topAnchor, constant: 20),
-            nameItemLabel.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 8),
+            foodImageView.topAnchor.constraint(equalTo: viewBackground.topAnchor, constant: 20),
+            foodImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 8),
+            foodImageView.widthAnchor.constraint(equalToConstant: 92),
+            foodImageView.heightAnchor.constraint(equalToConstant: 102),
             
-            descriptionItemLabel.topAnchor.constraint(equalTo: nameItemLabel.bottomAnchor, constant: 20),
-            descriptionItemLabel.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 8),
-            descriptionItemLabel.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -8),
+            nameItemLabel.topAnchor.constraint(equalTo: viewBackground.topAnchor, constant: 20),
+            nameItemLabel.leadingAnchor.constraint(equalTo: foodImageView.trailingAnchor, constant: 28),
+            
+            descriptionItemLabel.topAnchor.constraint(equalTo: nameItemLabel.bottomAnchor, constant: 2),
+            descriptionItemLabel.leadingAnchor.constraint(equalTo: foodImageView.trailingAnchor, constant: 28),
+            descriptionItemLabel.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -4),
             
         ])
     }

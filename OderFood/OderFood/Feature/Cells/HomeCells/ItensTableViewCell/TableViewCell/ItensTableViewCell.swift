@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ItensTableViewCell: UITableViewCell {
     static let identifier: String = String(describing: ItensTableViewCell.self)
@@ -40,6 +41,9 @@ class ItensTableViewCell: UITableViewCell {
     }
     
     public func setupCell(itens: Itens) {
+        if let urlFoodImg: URL = URL(string: itens.image ?? "") {
+            screen.foodImageView.af.setImage(withURL: urlFoodImg, placeholderImage: UIImage(named: "defaultImage"))
+        }
         screen.nameItemLabel.text = itens.name ?? ""
         screen.descriptionItemLabel.text = itens.description ?? ""
     }

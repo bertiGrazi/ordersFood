@@ -13,31 +13,31 @@
     "itensList": [
         {
           "name": "X-React",
-          "image": "Hambúrguer",
+          "image": "https://fastly.picsum.photos/id/292/3852/2556.jpg?hmac=cPYEh0I48Xpek2DPFLxTBhlZnKVhQCJsbprR-Awl9lo",
           "description": "Um hambúrger tão bonito que me deu fome enquanto eu fazia esse layout para o projeto.",
           "price": 34.90
         },
         {
           "name": "X-JavaScript",
-          "image": "Hambúrguer",
+          "image": "https://fastly.picsum.photos/id/292/3852/2556.jpg?hmac=cPYEh0I48Xpek2DPFLxTBhlZnKVhQCJsbprR-Awl9lo",
           "description": "Os ingredientes desse hambúrguer mudam toda semana, então você sempre terá uma surpresa...",
           "price": 34.90
         },
         {
           "name": "X-Cobol",
-          "image": "Hambúrguer",
+          "image": "https://fastly.picsum.photos/id/292/3852/2556.jpg?hmac=cPYEh0I48Xpek2DPFLxTBhlZnKVhQCJsbprR-Awl9lo",
           "description": "Aquele hambúrguer que não podemos tirar do cardápio devido aos clientes mais antigos da hamburgueria...",
           "price": 34.90
         },
         {
           "name": "X-Tailwind",
-          "image": "Hambúrguer",
+          "image": "https://fastly.picsum.photos/id/292/3852/2556.jpg?hmac=cPYEh0I48Xpek2DPFLxTBhlZnKVhQCJsbprR-Awl9lo",
           "description": "Aquele que você não gosta de primeira, mas depois fica viciado e não consegue mais largar...",
           "price": 34.90
         },
         {
           "name": "Hmmm, coquinha!",
-          "image": "Hambúrguer",
+          "image": "https://fastly.picsum.photos/id/292/3852/2556.jpg?hmac=cPYEh0I48Xpek2DPFLxTBhlZnKVhQCJsbprR-Awl9lo",
           "description": "Coca zero geladinha",
           "price": 5.90
         }
