@@ -26,6 +26,7 @@
 		B13F44132BE40BA7002339CC /* ItensTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13F44122BE40BA7002339CC /* ItensTableViewCell.swift */; };
 		B1A181952BE54A5800F59302 /* HeaderInSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A181942BE54A5800F59302 /* HeaderInSectionView.swift */; };
 		B1A90F522BE3B32C00D6FEB0 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A90F512BE3B32C00D6FEB0 /* HomeScreen.swift */; };
+		B1B2BA6C2BE94FF800C0129F /* HeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B2BA6B2BE94FF800C0129F /* HeaderComponent.swift */; };
 		B1B774E62BE506320004E49E /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = B1B774E52BE506320004E49E /* AlamofireImage */; };
 		B1C3375D2BE26A1F003E1019 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C3375C2BE26A1E003E1019 /* CartVC.swift */; };
 		B1C337612BE26A89003E1019 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C337602BE26A89003E1019 /* TabBarVC.swift */; };
@@ -51,6 +52,7 @@
 		B13F44122BE40BA7002339CC /* ItensTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItensTableViewCell.swift; sourceTree = "<group>"; };
 		B1A181942BE54A5800F59302 /* HeaderInSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderInSectionView.swift; sourceTree = "<group>"; };
 		B1A90F512BE3B32C00D6FEB0 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		B1B2BA6B2BE94FF800C0129F /* HeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderComponent.swift; sourceTree = "<group>"; };
 		B1C3375C2BE26A1E003E1019 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
 		B1C337602BE26A89003E1019 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +90,7 @@
 		B12246FB2BE2612600DEABA0 /* OderFood */ = {
 			isa = PBXGroup;
 			children = (
+				B1B2BA692BE94FA500C0129F /* Component */,
 				B127CBE72BE3C1D200E8BB6B /* Model */,
 				B127CBE02BE3C03100E8BB6B /* Service */,
 				B127CBDD2BE3BFE400E8BB6B /* Json */,
@@ -288,6 +291,22 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		B1B2BA692BE94FA500C0129F /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				B1B2BA6A2BE94FE500C0129F /* Header */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		B1B2BA6A2BE94FE500C0129F /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				B1B2BA6B2BE94FF800C0129F /* HeaderComponent.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		B1C3375E2BE26A5A003E1019 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +400,7 @@
 				B127CBF42BE3C7F000E8BB6B /* CategoriesCollectionViewCellScreen.swift in Sources */,
 				B12246FD2BE2612600DEABA0 /* AppDelegate.swift in Sources */,
 				B1A181952BE54A5800F59302 /* HeaderInSectionView.swift in Sources */,
+				B1B2BA6C2BE94FF800C0129F /* HeaderComponent.swift in Sources */,
 				B1A90F522BE3B32C00D6FEB0 /* HomeScreen.swift in Sources */,
 				B13F44112BE40AE2002339CC /* ItensTableViewCellScreen.swift in Sources */,
 				B1C3375D2BE26A1F003E1019 /* CartVC.swift in Sources */,
