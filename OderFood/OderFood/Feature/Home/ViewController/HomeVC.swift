@@ -20,6 +20,8 @@ class HomeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
     }
+    
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,5 +96,17 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return viewModel.sizeForItemAt
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? CategoriesCollectionViewCell {
+            cell.isSeletect = true
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? CategoriesCollectionViewCell {
+            cell.isSeletect = false
+        }
     }
 }

@@ -17,6 +17,7 @@ class CategoriesCollectionViewCellScreen: UIView {
         label.clipsToBounds = true
         label.layer.cornerRadius = 6
         label.textAlignment = .center
+        label.layer.borderWidth = 1.0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

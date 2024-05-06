@@ -17,6 +17,12 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
         return view
     }()
     
+    var isSeletect: Bool = true {
+        didSet {
+            updateBackgroundColor()
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addViews()
@@ -25,6 +31,10 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func updateBackgroundColor() {
+        screen.categoryLabel.layer.borderColor = isSeletect ? UIColor.secondaryBgColor.cgColor : UIColor.primarybgColor.cgColor
     }
     
     public func setupCell(categories: Categories) {
